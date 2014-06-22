@@ -7,10 +7,11 @@ printf("*output_double is %12.8f\n",*output_double);
 int i;
 printf("nn %d\n",nn);
 printf("input %f\n",*array_double);
+double *array_ptr;
 for(i=0;i<nn;i++) {
- *array_double = i*1.1;
- printf("output %f\n",*array_double);
- array_double = array_double+1;
+ array_ptr = array_double+i;
+ *array_ptr = (i+1)*1.1;
+ printf("output %f\n",*array_ptr);
 }
 return(0);
 }

@@ -3,7 +3,7 @@ use, intrinsic :: iso_c_binding
 implicit none
 integer, parameter :: nn=3
 real(kind=8)   :: xx,   yy,   zz(nn)
-real(c_double) :: xx_c, yy_c, zz_c(nn)
+real(kind=c_double) :: xx_c, yy_c, zz_c(nn)
 integer(c_int) :: return_value, nn_c=nn
 interface
  integer(c_int) function test_function(x,y,z,n) bind(c)
